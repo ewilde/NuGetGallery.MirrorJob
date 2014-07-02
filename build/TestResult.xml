@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\dev\NuGetGallery.MirrorJob\build-output\NuGetGallery.MirrorJob.UnitTests.dll" total="2" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-07-02" time="16:02:48">
+  <environment nunit-version="2.6.3.13283" clr-version="4.0.30319.18444" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\dev\NuGetGallery.MirrorJob\build" machine-name="EDDIEDESK-PC" user="EddieDesk" user-domain="EddieDesk-PC" />
+  <culture-info current-culture="en-GB" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\dev\NuGetGallery.MirrorJob\build-output\NuGetGallery.MirrorJob.UnitTests.dll" executed="True" result="Success" success="True" time="0.247" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="NuGetGallery" executed="True" result="Success" success="True" time="0.227" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="MirrorJob" executed="True" result="Success" success="True" time="0.227" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="UnitTests" executed="True" result="Success" success="True" time="0.227" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="Configuration" executed="True" result="Success" success="True" time="0.227" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="MirrorJobPackageSectionTests" executed="True" result="Success" success="True" time="0.224" asserts="0">
+                        <results>
+                          <test-case name="NuGetGallery.MirrorJob.UnitTests.Configuration.MirrorJobPackageSectionTests.can_read_configuration_element_package_name" executed="True" result="Success" success="True" time="0.198" asserts="1" />
+                          <test-case name="NuGetGallery.MirrorJob.UnitTests.Configuration.MirrorJobPackageSectionTests.can_read_configuration_section" executed="True" result="Success" success="True" time="0.009" asserts="1" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
