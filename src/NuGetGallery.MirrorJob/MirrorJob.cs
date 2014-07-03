@@ -10,27 +10,25 @@ namespace NuGetGallery.MirrorJob
 {
     public class MirrorJob
     {
-        public async void Run()
+        public void Run()
         {
-            var feeds = this.GetFeedsForJob().ToDictionary(document => document.Root.Attribute(XNamespace.Xml + "base").Value);
+            var feeds = this.GetFeedsForJob().Result.ToDictionary(document => document.Root.Attribute(XNamespace.Xml + "base").Value);
 
-            foreach (var VARIABLE in COLLECTION)
+            foreach (var item in feeds)
             {
                 
             }
         }
 
-        public IEnumerable<XDocument> GetFeedsForJob()
+        public async Task<IEnumerable<XDocument>> GetFeedsForJob()
         {
             var config = Configuration.MirrorJobPackageConfigurationSection.GetConfiguration();
             var uniqueFeedListUris = config.MirrorJobPackages.Cast<MirrorJobPackageConfigurationElement>().Select(item => new Uri(item.SourceFeed.ToString() + "Packages")).Distinct();
 
             var nugetApi = new NugetApi();
 
-            var downloadTasks = uniqueFeedListUris.Select(nugetApi.GetPackagesFromFeed).ToArray();
-            Task.WaitAll(downloadTasks);
-
-            return downloadTasks.Select(task => task.Result);
+            return await Task.WhenAll(uniqueFeedListUris.Select(nugetApi.GetPackagesFromFeed));
+           
         }
     }
 }

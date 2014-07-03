@@ -22,7 +22,7 @@ namespace NuGetGallery.MirrorJob.UnitTests
             //      <add PackageName="Autofac" SourceFeed="https://www.myget.org/F/autofac" TargetFeed="http://localhost/nuget/api/v2" TargetApiKey="99af9aa7-c8a0-4ce0-baf8-13f186d89586" />
             //    </MirrorJobPackages>
 
-            Assert.That(new MirrorJob().GetFeedsForJob().Count(), Is.EqualTo(2));
+            Assert.That(new MirrorJob().GetFeedsForJob().Result.Count(), Is.EqualTo(2));
         }
     }
 }
