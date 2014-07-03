@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGetGallery.MirrorJob.Unit
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{FA8194A3-66BB-4BE8-ACA1-7E00AC1D3CC5}"
 	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
 		..\build.cmd = ..\build.cmd
 		..\build\default.ps1 = ..\build\default.ps1
 	EndProjectSection
